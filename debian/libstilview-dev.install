@@ -1,0 +1,3 @@
+usr/include/stilview/
+usr/lib/*/libstilview.so
+usr/lib/*/pkgconfig/libstilview.pc

@@ -1,0 +1,44 @@
+Source: libsidplayfp
+Section: sound
+Priority: optional
+Maintainer: Enrico Weigelt, metux IT consult <info@metux.net>
+Build-Depends: debhelper (>=11~), libgcrypt-dev, pkg-config, xa65
+Standards-Version: 4.7.2
+
+Package: libsidplayfp6
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: library to play Commodore 64 music based on libsidplay2
+ libsidplayfp is a fork of sidplay2 born with the aim to improve the quality
+ of emulating the 6581, 8580 chips and the surrounding C64 system in order
+ to play SID music better.
+
+Package: libsidplayfp-dev
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, libsidplayfp6 (= ${binary:Version}), libstilview-dev (= ${binary:Version})
+Description: development files for libsidplayfp
+ libsidplayfp is a fork of sidplay2 born with the aim to improve the quality
+ of emulating the 6581, 8580 chips and the surrounding C64 system in order
+ to play SID music better.
+ .
+ This package contains the development files (headers, static library).
+
+Package: libstilview0
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: library to access STIL information
+ STIL (SID Tune Information List) provides detailed information about SID
+ tunes. This library provides access to STIL data.
+
+Package: libstilview-dev
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, libstilview0 (= ${binary:Version})
+Description: development files for libstilview
+ STIL (SID Tune Information List) provides detailed information about SID
+ tunes. This library provides access to STIL data.
+ .
+ This package contains the development files (headers, static library).
